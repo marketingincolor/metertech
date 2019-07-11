@@ -17,6 +17,15 @@
 	</section> <!-- end article section -->
 						
 	<footer class="article-footer">
+		<?php 
+		$file = get_field('spec_sheet');
+		if( $file ) {
+			$url = wp_get_attachment_url( $file );
+		?>
+			<a href="<?php echo $url; ?>" class="button download">Download Spec Sheet</a>
+		<?php } ?>
+
+		
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'jointswp' ), 'after'  => '</div>' ) ); ?>
 		<p class="tags"><?php the_tags('<span class="tags-title">' . __( 'Tags:', 'jointswp' ) . '</span> ', ', ', ''); ?></p>	
 	</footer> <!-- end article footer -->

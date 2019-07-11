@@ -10,26 +10,26 @@ $grid_columns = 4; ?>
 
 <?php if( 0 === ( $wp_query->current_post  )  % $grid_columns ): ?>
 
-    <div class="grid-x grid-margin-x grid-padding-x archive-grid" data-equalizer> <!--Begin Grid--> 
+    <div class="grid-x grid-margin-x NOgrid-padding-x archive-grid" data-equalizer> <!--Begin Grid--> 
 
 <?php endif; ?> 
 
 		<!--Item: -->
 		<div class="small-6 medium-3 large-3 cell panel" data-equalizer-watch>
 		
-			<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">
-			
 				<?php $terms = get_the_terms( $post->ID , 'product_type' ); 
-                    foreach ( $terms as $term ) {
+                    foreach ((array) $terms as $term ) {
                         $term_link = get_term_link( $term, 'product_type' );
-                        if( is_wp_error( $term_link ) )
-                        continue;
-                    echo '<a href="' . $term_link . '">' . $term->name . '</a>';
+                        //if( is_wp_error( $term_link ) )
+                        //continue;
+                    	echo '<img class="type-icon" src="'. get_template_directory_uri() .'/assets/images/mtw-type-ico-' . $term->slug . '.png" />';
                     } 
                 ?>
+			
+			<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">
 
 				<section class="featured-image" itemprop="text">
-					<?php the_post_thumbnail('full'); ?>
+					<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 				</section> <!-- end article section -->
 			
 				<header class="article-header">
@@ -41,10 +41,15 @@ $grid_columns = 4; ?>
 				</header> <!-- end article header -->	
 								
 				<section class="entry-content" itemprop="text">
-					<?php //the_content('<button class="tiny">' . __( 'Read more...', 'jointswp' ) . '</button>'); ?> 
+				<?php 
+				$file = get_field('spec_sheet');
+				if( $file ) {
+					$url = wp_get_attachment_url( $file );
+				?>
+					<a href="<?php echo $url; ?>" class="button download">Download Spec Sheet</a>
+				<?php } ?>
 
-					<a href="<?php the_permalink() ?>" class="button">Download Spec Sheet</a>
-					<a href="<?php the_permalink() ?>" class="button">More Product Info</a>
+					<a href="<?php the_permalink() ?>" class="button info">More Product Info</a>
 				</section> <!-- end article section -->
 								    							
 			</article> <!-- end article -->

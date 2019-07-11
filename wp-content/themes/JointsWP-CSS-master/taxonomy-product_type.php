@@ -11,7 +11,7 @@ get_header(); ?>
 
 	<div class="content grid-container">
 	
-		<div class="inner-content grid-x grid-margin-x REMOVEgrid-padding-x">
+		<div class="inner-content grid-x grid-margin-x REMOVEgrid-padding-x product-grid">
 		
 		    <main class="main small-12 cell" role="main">
 			    
