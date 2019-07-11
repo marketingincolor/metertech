@@ -6,7 +6,6 @@
  *
  */
 ?>
-
 <!doctype html>
 
   <html class="no-js"  <?php language_attributes(); ?>>
@@ -29,6 +28,12 @@
 	    <?php } ?>
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+		<link href="https://fonts.googleapis.com/css?family=Gothic+A1:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/b5fdac7867.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css" />
+		
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/styles/owl.carousel.min.css" />
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/styles/owl.theme.default.min.css" />
 
 		<?php wp_head(); ?>
 
@@ -44,9 +49,12 @@
 			<div class="off-canvas-content" data-off-canvas-content>
 				
 				<header class="header" role="banner">
-							
-					 <!-- This navs will be applied to the topbar, above all content 
+					<div class="grid-container">		
+						<!-- This navs will be applied to the topbar, above all content 
 						  To see additional nav styles, visit the /parts directory -->
-					 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
-	 	
+						<?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
+						<div class="top-bar-cta">
+							<a href="<?php the_field('billing_payment_link', 'option'); ?>" class="button pay-cta" target="_blank">Pay Your Bill</a><a href="<?php the_field('contact_us_link', 'option'); ?>" class="button contact-cta">Contact Us</a>
+						</div>
+	 				</div>
 				</header> <!-- end .header -->

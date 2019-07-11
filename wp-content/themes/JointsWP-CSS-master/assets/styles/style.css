@@ -208,7 +208,7 @@ PAGE NAVI STYLES
 /*********************
 COMMENT STYLES
 *********************/
-#comments .commentlist {
+/*#comments .commentlist {
   margin-left: 0px; }
 
 #respond ul {
@@ -263,12 +263,12 @@ COMMENT STYLES
   line-height: 1.5em; }
 
 .commentlist .comment-reply-link {
-  float: right; }
+  float: right; }*/
 
 /*********************
 COMMENT FORM STYLES
 *********************/
-.respond-form {
+/*.respond-form {
   margin: 1.5em 10px;
   padding-bottom: 2.2em; }
   .respond-form form {
@@ -319,7 +319,7 @@ COMMENT FORM STYLES
   margin: 1.5em 10px 0.7335em 0; }
 
 .nocomments {
-  margin: 0 20px 1.1em; }
+  margin: 0 20px 1.1em; }*/
 
 /*********************
 SIDEBARS & ASIDES
@@ -335,7 +335,7 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  margin-top: 1em; }
+  /* margin-top: 1em; */ }
 
 /*********************
 VISUAL EDITOR STYLES
@@ -351,3 +351,95 @@ PLUGIN STYLES
   margin: 0; }
 
 /*# sourceMappingURL=style.css.map */
+
+/*********************
+MTW SITE CUSTOMIZATIONS
+*********************/
+body { color:#242626; }
+body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 { font-family: 'Gothic A1', sans-serif; }
+
+.h1, h1 { font-size:28px; font-weight:500; }
+.h2, h2 { font-size:24px; font-weight:500; }
+.h3, h3 { font-size:22px; font-weight:500; }
+.h4, h4 { font-size:18px; font-weight:500; }
+.h5, h5 { font-size:16px; font-weight:500; }
+.h6, h6 { font-size:14px; font-weight:500; }
+
+.active { color:#003d94; }
+.hover { color:#005cb5; }
+
+.red { color:#a11217; }
+.red-hover { color:#cc1c29; }
+
+.gray { color:#545759; }
+.gray-hover { color:#6b6e73; }
+
+.nav-seperator { color:#003d94; }
+
+footer.footer { background-color:#D2D2D9; }
+.footer .footer-meta p { margin:1rem 0rem 0rem 0rem; }
+
+/*********************
+CUSTOM NAVIGATIONS
+*********************/
+
+header.header { border-bottom:4px solid #003d94; }
+.top-bar, .top-bar ul { background-color:inherit; padding:0; }
+.top-bar .top-bar-left .custom-logo-link { padding:1em 0em;  }
+
+.top-bar .top-bar-right .menu a { line-height:inherit; font-weight:600; min-height:100px; padding:2.4em 1em; background-color:inherit; color:#242626; border-top:3px solid #FFF; }
+.top-bar .top-bar-right .menu .active a { background:#003d94; border-top:3px solid #a11217; color:#FFF; }
+.top-bar .top-bar-right .menu  a:hover { background:#005CB5; border-top:3px solid #003d94; color:#FFF; }
+
+.header .top-bar-cta { text-align:right; position:relative; bottom:1.25em; z-index:10; height:.5px; }
+.header .top-bar-cta .button { padding:1em 3em; margin: 0em; text-transform:uppercase; font-weight:600; }
+.header .top-bar-cta .button.pay-cta { color:#FFF; background-color:#545759; }
+.header .top-bar-cta .button.pay-cta:hover { background-color:#6b6e73; }
+.header .top-bar-cta .button.contact-cta { color:#FFF; background-color:#a11217; }
+.header .top-bar-cta .button.contact-cta:hover { background-color:#cc1c29; }
+
+.breadcrumb { margin:2em 0em; }
+
+/*********************
+CUSTOM PAGE COMPONENTS
+*********************/
+
+.home {}
+.cta-button, .slide-cta-button { color:#FFF; border:3px solid #FFF; padding:.5em 1em; }
+.cta-button:hover, .slide-cta-button:hover { color:#FFF; background-color:#cc1c29; }
+.videos-home { color:#FFF; background: url("../images/mtw-home-videocta-bg.png") no-repeat top center / cover; }
+.videos-home .content { padding-top:4em; padding-bottom:6em; }
+.partners-home .partners-section h3{ margin-top:1em; }
+
+.swapper img:last-child{display:none}
+.swapper:hover img:first-child{display:none}
+.swapper:hover img:last-child{display:inline-block}
+
+.content.grid-container { margin-bottom:1em; }
+article { text-align:center; }
+article.category-news .article-header { margin-bottom:1em; }
+article.category-news .article-header .title { padding-top:1rem; }
+article.category-news .article-header .title a { color:inherit; }
+article.category-news .entry-content p { text-align:left; }
+.archive article.category-news .entry-content { margin-bottom:2em; }
+.archive article.category-news .entry-content p { text-align:center; }
+.archive article.category-news .entry-content .read-button { font-weight:600; text-transform:uppercase; padding:.5em 1.5em; border:3px solid #cc1c29; color:#242626; text-align:center; }
+.archive article.category-news .entry-content .read-button:hover { background-color:#cc1c29; color:#FFF; text-align:center; }
+
+.read-button { font-weight:600; text-transform:uppercase; padding:.5em 1.5em; border:3px solid #cc1c29; color:#242626; text-align:center; }
+.read-button:hover { background-color:#cc1c29; color:#FFF; text-align:center; }
+
+.page-title { text-align:center; margin:2em 0em 1em 0em;}
+
+
+.videos .main article .article-header .title { padding:.5em 1em 2em 1em; }
+.videos .main article .article-header .title a { color:inherit; }
+
+/*********************
+OWL CAROUSEL CUSTOMIZATIONS
+*********************/
+#partner-carousel .owl-prev, #partner-carousel .owl-next { width: 15px; height: 70px; position: absolute; top: 0%; display: block !important; }
+#partner-carousel .owl-prev { margin-left: -20px; }
+#partner-carousel .owl-next { right: -25px; }
+#partner-carousel .owl-prev i, #partner-carousel .owl-next i {transform : scale(3,6); color: #003D94;} 
+#partner-carousel .owl-item img { max-height:70px; width:auto; margin:auto; }

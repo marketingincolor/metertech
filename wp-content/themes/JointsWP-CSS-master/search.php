@@ -7,9 +7,9 @@
  	
 get_header(); ?>
 			
-	<div class="content">
+	<div class="content grid-container">
 
-		<div class="inner-content grid-x grid-margin-x grid-padding-x">
+		<div class="inner-content grid-x grid-margin-x REMOVEgrid-padding-x">
 	
 			<main class="main small-12 medium-8 large-8 cell" role="main">
 				<header>
@@ -32,8 +32,6 @@ get_header(); ?>
 			    <?php endif; ?>
 	
 		    </main> <!-- end #main -->
-		
-		    <?php get_sidebar(); ?>
 		
 		</div> <!-- end #inner-content -->
 
