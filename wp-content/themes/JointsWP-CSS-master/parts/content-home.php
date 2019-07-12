@@ -53,7 +53,7 @@
 	</div>
 </div>
 
-<div class="videos-home" style="background-color:grey; text-align:center;">
+<div class="videos-home">
 	<div class="content grid-container">
 		<div class="inner-content grid-x grid-margin-x REMOVEgrid-padding-x">
 	    	<div class="main small-12 cell" role="container">
@@ -96,7 +96,7 @@
 				<?php else : endif; ?>
 
 				</div>
-				<p style="padding-top:2em;"><a href="../videos" class="cta-button">See All Videos</a></p>
+				<p style="padding-top:2em;"><a href="../videos" class="cta-button">View All Videos</a></p>
 
 			</div>
 		</div>

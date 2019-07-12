@@ -1,25 +1,27 @@
 <?php
 /**
- * The template part for displaying related news items
+ * The template part for displaying company staff members
  */
 ?>
-<div class="related-content" style="text-align:center;">
-	<div class="content grid-container" style="margin-bottom:0;">
-		<div class="inner-content grid-x grid-margin-x REMOVEgrid-padding-x">
-	    	<div class="main small-12 cell" role="container">
 
-				<h2>Related News Articles</h2>
+<div class="content grid-container">
+	<div class="inner-content grid-x grid-margin-x REMOVEgrid-padding-x staff-grid">
+	    <main class="main small-12 cell" role="main">
+
+
+
+				<h2>Our Staff</h2>
 				<div class="grid-x grid-margin-x">
 
 				<?php 
-					$args = array('category' => 'news', 'posts_per_page' => '2', 'post__not_in' => array($post->ID) );
+					$args = array('post_type' => 'staff', 'posts_per_page' => '4' );
 					$newsQuery = new WP_Query($args);
 				?>
 				<?php if ( $newsQuery->have_posts() ) : ?>
 					<?php while ( $newsQuery->have_posts() ) : 
 						$newsQuery->the_post() ?>
 
-					<div class="small-12 medium-6 cell">
+					<div class="small-12 medium-3 cell">
 
 		
 			<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">
@@ -47,7 +49,7 @@
 
 				</div>
 
-			</div>
-		</div>
-	</div>
-</div>
+
+		</main> <!-- end #main -->
+	</div> <!-- end #inner-content -->
+</div> <!-- end #content -->

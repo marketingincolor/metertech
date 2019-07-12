@@ -30,6 +30,7 @@ get_header(); ?>
 			 
 					<?php if (is_category('news')) : ?>
 					<?php get_template_part( 'parts/loop', 'archive-news-grid' ); ?>
+					
 					<?php else : ?>
 					<!-- To see additional archive styles, visit the /parts directory -->
 					<?php get_template_part( 'parts/loop', 'archive' ); ?>

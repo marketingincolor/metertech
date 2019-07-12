@@ -376,8 +376,13 @@ body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 { font-family: 'Gothi
 
 .nav-seperator { color:#003d94; }
 
-footer.footer { background-color:#D2D2D9; }
-.footer .footer-meta p { margin:1rem 0rem 0rem 0rem; }
+footer.footer { background-color:#D2D2D9; color:#242626; font-weight:600; }
+footer.footer a { color:#242626; padding:.7rem 0rem; }
+footer.footer .menu .active>a { background:transparent; color:#242626; }
+footer.footer nav li { width:100%; }
+footer.footer nav, footer.footer .footer-meta { margin:4rem 0rem; }
+footer.footer .footer-meta p { margin:1rem 0rem 0rem 0rem; }
+footer.footer .copyright { font-size:12px; }
 
 /*********************
 CUSTOM NAVIGATIONS
@@ -405,15 +410,23 @@ CUSTOM PAGE COMPONENTS
 *********************/
 
 .home {}
-.cta-button, .slide-cta-button { color:#FFF; border:3px solid #FFF; padding:.5em 1em; }
+.cta-button { font-size:10px; }
+.cta-button, .slide-cta-button { text-transform:uppercase; font-weight:600; color:#FFF; border:2px solid #FFF; padding:.5em 1.5em; }
 .cta-button:hover, .slide-cta-button:hover { color:#FFF; background-color:#cc1c29; }
-.videos-home { color:#FFF; background: url("../images/mtw-home-videocta-bg.png") no-repeat top center / cover; }
-.videos-home .content { padding-top:4em; padding-bottom:6em; }
+.videos-home, .related-content { color:#FFF; background: url("../images/mtw-cta-grey-bg.png") no-repeat top center / cover; }
+.videos-home .content { padding-top:4em; padding-bottom:6em; text-align:center; }
+.videos-home .content .cta-button { font-size:12px; }
 .partners-home .partners-section h3{ margin-top:1em; }
-
 .swapper img:last-child{display:none}
 .swapper:hover img:first-child{display:none}
 .swapper:hover img:last-child{display:inline-block}
+
+.related-content .content { padding-top:2em; padding-bottom:4em; }
+.related-content article.category-news .entry-content p { text-align:left; line-height:1.2; }
+
+.related-cert { color:#FFF; background: url("../images/mtw-cta-blue-bg.png") no-repeat top center / cover; }
+.related-cert .inner-content { padding:5em; }
+.related-cert .inner-content h2 { padding:1em; }
 
 .content.grid-container { margin-bottom:1em; }
 article { text-align:center; }
@@ -422,9 +435,13 @@ article.category-news .article-header { margin-bottom:1em; }
 article.category-news .article-header .title { padding-top:1rem; }
 article.category-news .article-header .title a { color:inherit; }
 article.category-news .entry-content p { text-align:left; }
+article.type-products .article-footer .button { text-transform:uppercase; font-weight:800; padding:.85em 2em; background-color:transparent; }
+article.type-products .article-footer .button.download { color:#FFF; border:2px solid #a11217; background-color:#a11217;  }
+article.type-products .article-footer .button.download:hover { background-color:#cc1c29; }
+
 .archive article.category-news .entry-content { margin-bottom:2em; }
 .archive article.category-news .entry-content p { text-align:center; }
-.archive article.category-news .entry-content .read-button { font-weight:600; text-transform:uppercase; padding:.5em 1.5em; border:3px solid #cc1c29; color:#242626; text-align:center; }
+.archive article.category-news .entry-content .read-button { font-weight:600; text-transform:uppercase; padding:.5em 1.5em; border:2px solid #cc1c29; color:#242626; text-align:center; }
 .archive article.category-news .entry-content .read-button:hover { background-color:#cc1c29; color:#FFF; text-align:center; }
 
 .product-grid .product-filter { padding:1em 0em 3em 0em; }
@@ -436,18 +453,25 @@ article.category-news .entry-content p { text-align:left; }
 
 .product-grid .products .entry-content { padding-bottom:4em; }
 .product-grid .products .entry-content .button { font-size:10px; text-transform:uppercase; font-weight:800; padding:.5em 2em; background-color:transparent; }
-.product-grid .products .entry-content .button.download { color:#FFF; border:3px solid #a11217; background-color:#a11217;  }
+.product-grid .products .entry-content .button.download { color:#FFF; border:2px solid #a11217; background-color:#a11217;  }
 .product-grid .products .entry-content .button.download:hover { background-color:#cc1c29; }
-.product-grid .products .entry-content .button.info { border:3px solid #cc1c29; color:#242626; }
+.product-grid .products .entry-content .button.info { border:2px solid #cc1c29; color:#242626; }
 .product-grid .products .entry-content .button.info:hover { background-color:#cc1c29; color:#FFF; }
 
-.read-button { font-weight:600; text-transform:uppercase; padding:.5em 1.5em; border:3px solid #cc1c29; color:#242626; text-align:center; }
+.product-image-gallery { padding: 1.5rem;}
+.product-thumbs li { padding:0em 0em 1em 1em; }
+.product-thumbs a { padding: 0 !important; }
+.product-thumbs a img { display: inline-block; max-width: 100%; line-height: 0; width: 100px; height: 100px; border: none; }
+.product-thumbs a.active { outline: 3px solid #a11217; outline-offset: -3px; }
+
+.read-button { font-weight:600; text-transform:uppercase; padding:.5em 1.5em; border:2px solid #cc1c29; color:#242626; text-align:center; }
 .read-button:hover { background-color:#cc1c29; color:#FFF; text-align:center; }
 
 .page-title { text-align:center; margin:2em 0em 1em 0em;}
 
 .videos .main article .article-header .title { padding:.5em 1em 2em 1em; }
 .videos .main article .article-header .title a { color:inherit; }
+
 
 /*********************
 OWL CAROUSEL CUSTOMIZATIONS

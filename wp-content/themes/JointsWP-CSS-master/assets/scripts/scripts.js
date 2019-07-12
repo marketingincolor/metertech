@@ -38,3 +38,11 @@ jQuery(document).ready(function(){
 		navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
 	});
 });
+
+jQuery('.product-thumb').on('click', function() {
+	jQuery('#main-product-image').attr('src', jQuery(this).data('image'));
+	//jQuery('.product-thumb').toggleClass('active');
+	//jQuery(this).toggleClass('active');
+	jQuery('.product-thumb').removeClass('active');
+	jQuery(this).addClass('active');
+})

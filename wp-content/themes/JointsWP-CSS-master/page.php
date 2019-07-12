@@ -33,4 +33,12 @@ get_header(); ?>
 
 <?php endif; ?>
 
+<?php if ( is_page('about') ) : ?>
+
+	<?php get_template_part( 'parts/loop', 'staff-grid' ); ?>
+
+<?php else: ?>
+	
+<?php endif; ?>
+
 <?php get_footer(); ?>

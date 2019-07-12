@@ -14,27 +14,28 @@
 						
 						<div class="small-12 medium-2 cell">
 							<nav role="navigation">
+								<a style="cursor:default;">Company</a>
 	    						<?php joints_footer_links(); ?>
 	    					</nav>
 	    				</div>
 						
 						<div class="small-12 medium-2 cell">
 							<nav role="navigation">
+								<a style="cursor:default;">Products</a>
 	    						<?php joints_footer_products(); ?>
 	    					</nav>
 	    				</div>
 
 						<div class="small-12 medium-4 medium-offset-3 cell">
-							<div class="footer-meta" style="margin:2em 0em;">
+							<div class="footer-meta">
 								<?php if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } ?>
-								<p><?php the_field('company_address', 'option'); ?></p>
-								<p><?php the_field('company_address_alt', 'option'); ?></p>
+								<p><?php the_field('company_address', 'option'); ?> <?php the_field('company_address_alt', 'option'); ?></p>
 								<p>P: <?php the_field('company_phone', 'option'); ?></p>
 								<p>F: <?php the_field('company_fax', 'option'); ?></p>
 							</div>
 	    				</div>
 
-						<div class="small-12 medium-12 large-12 cell">
+						<div class="small-12 medium-12 large-12 cell text-center">
 							<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
 						</div>
 					
