@@ -34,7 +34,7 @@
 		
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/styles/owl.carousel.min.css" />
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/styles/owl.theme.default.min.css" />
-
+		<script>templateURL = '<?php bloginfo("template_directory"); ?>';</script>
 		<?php wp_head(); ?>
 
 	</head>

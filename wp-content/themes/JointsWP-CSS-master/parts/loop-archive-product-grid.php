@@ -10,7 +10,7 @@ $grid_columns = 4; ?>
 
 <?php if( 0 === ( $wp_query->current_post  )  % $grid_columns ): ?>
 
-    <div class="grid-x grid-margin-x NOgrid-padding-x archive-grid" data-equalizer> <!--Begin Grid--> 
+    <div id="products-grid" class="grid-x grid-margin-x NOgrid-padding-x archive-grid" data-equalizer> <!--Begin Grid--> 
 
 <?php endif; ?> 
 

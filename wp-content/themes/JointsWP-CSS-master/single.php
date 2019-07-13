@@ -21,6 +21,10 @@ get_header(); ?>
 
 		    		<?php get_template_part( 'parts/loop', 'video' ); ?>
 
+				<?php elseif (is_singular('staff')) : ?>
+
+		    		<?php get_template_part( 'parts/loop', 'staff' ); ?>
+
 				<?php else : ?>
 
 		    		<?php get_template_part( 'parts/loop', 'single' ); ?>
