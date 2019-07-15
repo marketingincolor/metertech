@@ -7,7 +7,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
 	<header class="article-header">
-		<div class="content grid-container">
+		<div class="content grid-container text-left">
 			<div class="inner-content grid-x grid-margin-x">
 				<div class="small-12 medium-4 cell">
 					<?php the_post_thumbnail('full'); ?>
@@ -27,12 +27,12 @@
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
-					<p><button class="non-button" data-open="contactModal">Contact <?php the_title(); ?></button></p>
+					<p class="nomargin"><button class="non-button" data-open="contactModal">Contact <?php the_title(); ?></button></p>
 
 				<?php endif; ?>
 
 				<?php if( get_field('staff_linkedin') ): ?>
-					<p><a href="<?php the_field('staff_linkedin'); ?>" target="_blank">Find me on LinkedIn!</a></p>
+					<p class="nomargin"><a href="<?php the_field('staff_linkedin'); ?>" target="_blank">Find me on LinkedIn!</a></p>
 				<?php endif; ?>
 
 			</div>

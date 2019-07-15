@@ -12,10 +12,6 @@ jQuery('iframe[src*="youtube.com"], iframe[src*="vimeo.com"]').each(function(){i
 Insert Custom JS Below
 */
 
-
-
-
-
 function ajaxFilterProducts(){
 	jQuery('#filter-products').on('click',function(e){
 	e.preventDefault();
@@ -46,12 +42,6 @@ console.log(products);
 		});
 	});
 }
-
-
-
-
-
-
 
 jQuery(document).ready(function(){
 	jQuery("#partner-carousel").owlCarousel({

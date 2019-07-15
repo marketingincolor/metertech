@@ -36,7 +36,7 @@
 	    				</div>
 
 						<div class="small-12 medium-12 large-12 cell text-center">
-							<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+							<p class="source-org copyright">Copyright <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. <br class="show-for-small-only"> All rights reserved. <br class="show-for-small-only"> Privacy Policy</p>
 						</div>
 					
 					</div> <!-- end #inner-footer -->

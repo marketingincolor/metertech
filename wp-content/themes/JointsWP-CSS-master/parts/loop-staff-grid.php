@@ -8,7 +8,7 @@
 	    <main class="main small-12 cell text-center" role="main">
 
 				<h1 class="content-title">Our Staff</h1>
-				<div class="grid-x grid-margin-x">
+				<div class="grid-x grid-margin-x align-center">
 
 				<?php 
 					$args = array('post_type' => 'staff', 'posts_per_page' => '4' );
