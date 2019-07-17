@@ -21,7 +21,7 @@ $grid_columns = 2; ?>
 
 
 				<div class="grid-x grid-margin-x">
-					<div class="small-12 medium-shrink cell">
+					<div class="small-3 medium-shrink cell">
 						<section class="featured-image" itemprop="text">
 						<?php if( get_field('certification_document') ): ?>
 							<a href="<?php the_field('certification_document'); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><img class="type-icon" src="<?php echo get_template_directory_uri() ?>/assets/images/mtw-pdf-icon-black.svg" /></a>
@@ -30,7 +30,7 @@ $grid_columns = 2; ?>
 						<?php endif; ?>
 						</section> <!-- end article section -->
 					</div>
-					<div class="small-12 medium-auto cell">		
+					<div class="small-9 medium-auto cell">		
 						<section class="entry-content" itemprop="text">
 						<?php if( get_field('certification_document') ): ?>
 							<h3 class="title"><?php the_title(); ?></h3>	

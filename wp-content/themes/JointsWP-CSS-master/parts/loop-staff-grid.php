@@ -18,7 +18,7 @@
 					<?php while ( $newsQuery->have_posts() ) : 
 						$newsQuery->the_post() ?>
 
-					<div class="small-12 medium-3 cell">
+					<div class="small-8 medium-3 cell">
 		
 						<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">
 						

@@ -205,7 +205,7 @@ function custom_convert_id_to_term_in_query($query) {
 function the_breadcrumb()
 {
     $showOnHome = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
-    $delimiter = '&gt;'; // delimiter between crumbs
+    $delimiter = '&nbsp;&nbsp;&gt;&nbsp;&nbsp;'; // delimiter between crumbs
     $home = 'Home'; // text for the 'Home' link
     $showCurrent = 1; // 1 - show current post/page title in breadcrumbs, 0 - don't show
     $before = '<span class="current">'; // tag before the current crumb

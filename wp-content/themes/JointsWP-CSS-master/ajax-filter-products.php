@@ -6,7 +6,8 @@
   $all_products = array();
 
   // If user selected all indications
-  if ($products === 'all' || in_array('all', $products)) {
+  //if ($products === 'all' || in_array('all', $products)) {
+  if ($products === 'all') {
   	$terms = get_terms( array(
 		  'taxonomy' => 'product_type',
 		  'hide_empty' => false,

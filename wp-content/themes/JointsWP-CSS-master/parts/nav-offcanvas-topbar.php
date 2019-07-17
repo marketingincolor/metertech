@@ -8,10 +8,8 @@
 
 <div class="top-bar" id="top-bar-menu">
 	<div class="top-bar-left float-left">
-		<?php //if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } ?>
 		<ul class="menu">
 			<li><?php if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } ?></li>
-			<!-- <li><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></li> -->
 		</ul>
 	</div>
 	<div class="top-bar-right show-for-medium">
@@ -40,9 +38,8 @@
 		</ul>
 	</div>
 	<div class="top-bar-right float-right show-for-small-only">
-		<ul class="menu">
-			<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
-			<li><a data-toggle="off-canvas"><?php _e( 'Menu', 'jointswp' ); ?></a></li>
+		<ul class="mob-menu" style="float:right; list-style:none; margin:0.75em; max-width:40px;">
+			<li><a data-toggle="off-canvas"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/mtw-mob-nav-menu-icon.svg"></a></li>
 		</ul>
 	</div>
 </div>

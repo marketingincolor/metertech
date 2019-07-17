@@ -20,7 +20,7 @@ get_header(); ?>
 					<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
 		    	</header>
 		
-				<div class="product-filter grid-x grid-margin-x text-center">
+				<div class="product-filter grid-x grid-margin-x align-center text-center">
 					<div class="small-12 medium-5 cell">
 						<form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url(); ?>">
 							<div class="product-search">
@@ -28,20 +28,17 @@ get_header(); ?>
 							<input type="hidden" value="1" name="sentence" />
 							<input type="hidden" value="products" name="post_type" />
 							<input type="hidden" name="product_type" value="electric,gas,fittings,heat,water" />
-							<input class="product-search-submit" type="submit" id="searchsubmit" value="Search" />
+							<input class="product-search-submit button contact-cta" type="submit" id="searchsubmit" value="Search" />
 							</div>
 						</form>
 
 					</div>
-					<div class="small-12 medium-2 cell"> OR </div>
+					<div class="small-12 medium-1 cell"> OR </div>
 					<div class="small-12 medium-5 cell">
 
-
-
-
 						<form>
-						  <div class="grid-x grid-margin-x grid-margin-y">
-								<div class="medium-6 medium-offset-3 small-10 small-offset-1 cell">
+						  <div class="grid-x">
+								<div class="small-8 cell">
 									
 										<select class="" name="products" id="products-select">
 											<option value="all" selected>Filter By</option>
@@ -60,16 +57,11 @@ get_header(); ?>
 										</select>
 									
 								</div>
-								<div class="small-12 cell">
-									<button id="filter-products" class="button" type="submit">Filter Products</button>
+								<div class="small-4 cell">
+									<button id="filter-products" class="button contact-cta" type="submit">Filter Products</button>
 								</div>
 						  </div>
 						</form>
-
-
-
-
-
 
 					</div>
 				</div>

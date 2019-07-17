@@ -25,6 +25,7 @@
 				$categories = get_categories( array(
 					'taxonomy' => 'product_type',
 					'hide_empty' => 0,
+					'exclude' => array(15),
 				    'orderby' => 'name',
 				    'order'   => 'ASC'
 				) );
@@ -96,7 +97,7 @@
 				<?php else : endif; ?>
 
 				</div>
-				<p style="padding-top:2em;"><a href="../videos" class="cta-button">View All Videos</a></p>
+				<p style="padding-top:2em;"><a href="<?php echo site_url(); ?>/videos" class="cta-button">View All Videos</a></p>
 
 			</div>
 		</div>

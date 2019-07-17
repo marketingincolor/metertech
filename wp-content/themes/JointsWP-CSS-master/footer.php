@@ -14,14 +14,14 @@
 						
 						<div class="small-12 medium-2 cell">
 							<nav role="navigation">
-								<a style="cursor:default;">Company</a>
+								<a class="nav-section" style="cursor:default;">Company</a>
 	    						<?php joints_footer_links(); ?>
 	    					</nav>
 	    				</div>
 						
 						<div class="small-12 medium-2 cell">
 							<nav role="navigation">
-								<a style="cursor:default;">Products</a>
+								<a class="nav-section" style="cursor:default;">Products</a>
 	    						<?php joints_footer_products(); ?>
 	    					</nav>
 	    				</div>
@@ -36,7 +36,7 @@
 	    				</div>
 
 						<div class="small-12 medium-12 large-12 cell text-center">
-							<p class="source-org copyright">Copyright <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. <br class="show-for-small-only"> All rights reserved. <br class="show-for-small-only"> Privacy Policy</p>
+							<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. <br class="show-for-small-only"> All rights reserved. <br><a href="<?php echo site_url(); ?>/privacy-policy">Privacy Policy</a></p>
 						</div>
 					
 					</div> <!-- end #inner-footer -->

@@ -55,7 +55,7 @@
 		if( $file ) {
 			$url = wp_get_attachment_url( $file );
 		?>
-			<a href="<?php echo $url; ?>" class="button download">Download Spec Sheet</a>
+			<a href="<?php echo $url; ?>" class="button download" target="_blank">Download Spec Sheet</a>
 		<?php } ?>
 
 
