@@ -16,6 +16,11 @@
       <ul class="orbit-container">
 
       <?php if( have_rows('showcase') ):
+
+        $count = 0;
+        $rowcount = get_field('showcase');
+        if (is_array($rowcount)) { $count = count($rowcount); }
+
         while ( have_rows('showcase') ) : the_row(); ?>
 
         <li class="orbit-slide">
@@ -32,19 +37,18 @@
         </li>
 
       <?php 
-        endwhile;
-      else : // no rows found
-      endif; ?>
+        endwhile; ?>
 
       </ul>
     </div>
-
     <nav class="orbit-bullets">
-      <button data-slide="0"><span class="show-for-sr">First slide details.</span></button>
-      <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
-      <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
-      <!-- <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button> -->
+      <?php for($i=1; $i<=$count; $i++){ $j=$i-1; ?>
+          <button data-slide="<?php echo $j; ?>"><span class="show-for-sr">Slide details</span></button>
+      <?php } ?>
     </nav>
+
+      <?php else : // no rows found
+      endif; ?>
 
   </div>
 
