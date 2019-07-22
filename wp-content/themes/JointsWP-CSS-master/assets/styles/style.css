@@ -466,8 +466,13 @@ CUSTOM PAGE COMPONENTS
 .related-cert .inner-content h2 { padding:1em; }
 
 .content.grid-container { margin-bottom:1em; }
-article { text-align:center; }
 
+.search article { margin-bottom:1em; }
+.search article .featured-image a { color:inherit; }
+.search article .featured-image a i { color:inherit; font-size:4em; }
+.search article .article-header .title { padding-top:1rem; font-size:18px; font-weight:700; }
+.search article .article-header .title a { color:inherit; }
+article { text-align:center; }
 article.category-news .article-header { margin-bottom:1em; }
 article.category-news .article-header .title { padding-top:1rem; font-size:18px; font-weight:700; }
 article.category-news .article-header .title a { color:inherit; }

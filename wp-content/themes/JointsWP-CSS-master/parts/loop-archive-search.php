@@ -4,7 +4,7 @@
  *
  * For more info: http://jointswp.com/docs/grid-archive/
  */
-
+$thetype = get_post_type($post_ID);
 // Adjust the amount of rows in the grid
 $grid_columns = 4; ?>
 
@@ -16,11 +16,24 @@ $grid_columns = 4; ?>
 
 		<!--Item: -->
 		<div class="small-12 medium-3 cell panel" xdata-equalizer-watch>
-		
+		<?php //$thetype = get_post_type($post_ID);?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">
 			
 				<section class="featured-image" itemprop="text">
-					<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('full'); ?></a>
+
+				<?php if ( in_array( $thetype, array('products', 'staff')) ) : ?>
+					<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('thumb'); ?></a>
+				<?php elseif ( $thetype=='certifications' ) : ?>
+					<a href="<?php the_permalink() ?>"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+				<?php elseif ( $thetype=='videos' ) : ?>
+					<a href="<?php the_permalink() ?>"><i class="fa fa-file-video-o" aria-hidden="true"></i></a>
+				<?php elseif ( $thetype=='page' ) : ?>
+					<a href="<?php the_permalink() ?>"><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
+				<?php elseif ( $thetype=='post' ) : ?>
+					<a href="<?php the_permalink() ?>"><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
+				<?php else : ?>
+				<?php endif; ?>
+
 				</section> <!-- end article section -->
 			
 				<header class="article-header">
@@ -28,8 +41,23 @@ $grid_columns = 4; ?>
 				</header> <!-- end article header -->	
 								
 				<section class="entry-content" itemprop="text">
-					<?php the_excerpt(); ?> 
+
+				<?php if ( $thetype=='products' ) : ?>
+					<a class="read-button" href="<?php the_permalink(); ?>">See Product</a>
+				<?php elseif ( $thetype=='staff' ) : ?>
+					<a class="read-button" href="<?php the_permalink(); ?>">Read Bio</a>
+				<?php elseif ( $thetype=='certifications' ) : ?>
+					<a class="read-button" href="<?php the_permalink(); ?>">View Certification</a>
+				<?php elseif ( $thetype=='videos' ) : ?>
+					<a class="read-button" href="<?php the_permalink(); ?>">View Video</a>
+				<?php elseif ( $thetype=='post' ) : ?>
 					<a class="read-button" href="<?php the_permalink(); ?>">Read Article</a>
+				<?php elseif ( $thetype=='page' ) : ?>
+					<a class="read-button" href="<?php the_permalink(); ?>">Visit Page</a>
+				<?php else : ?>
+					<a class="read-button" href="<?php the_permalink(); ?>">View</a>
+				<?php endif; ?>
+
 				</section> <!-- end article section -->
 								    							
 			</article> <!-- end article -->

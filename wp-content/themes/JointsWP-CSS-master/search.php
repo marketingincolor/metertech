@@ -12,6 +12,9 @@ get_header(); ?>
 		<div class="inner-content grid-x grid-margin-x">
 	
 			<main class="main small-12 medium-10 medium-offset-1 cell" role="main">
+
+
+
 				<header style="padding:2em 0em;">
 					<h1 class="archive-title"><?php _e( 'Search Results for:', 'jointswp' ); ?> <?php echo esc_attr(get_search_query()); ?></h1>
 				</header>
@@ -30,6 +33,9 @@ get_header(); ?>
 					<?php get_template_part( 'parts/content', 'missing' ); ?>
 						
 			    <?php endif; ?>
+	
+
+
 	
 		    </main> <!-- end #main -->
 		

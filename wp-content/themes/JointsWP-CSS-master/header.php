@@ -30,6 +30,7 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		<link href="https://fonts.googleapis.com/css?family=Gothic+A1:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.fontawesome.com/b5fdac7867.css">
+		<!-- <script src="https://use.fontawesome.com/b5fdac7867.js"></script> -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css" />
 		
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/styles/owl.carousel.min.css" />
