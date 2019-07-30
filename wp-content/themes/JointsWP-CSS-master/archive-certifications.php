@@ -13,14 +13,17 @@ get_header(); ?>
 		
 		    <main class="main small-12 cell" role="main">
 			    
-		    	<header>
-		    		<h1 class="page-title"><?php post_type_archive_title(); ?></h1>
-					<?php //the_archive_description('<div class="taxonomy-description">', '</div>');?>
-					<?php if( get_field('certifications_header', 'options') ): ?>
-						<?php the_field('certifications_header', 'options'); ?>
-					<?php endif; ?>
-		    	</header>
-		
+			    <div class="grid-x grid-margin-x grid-padding-x">
+			    	<div class="small-12 medium-8 medium-offset-2">
+				    	<header>
+				    		<h1 class="page-title"><?php post_type_archive_title(); ?></h1>
+							<?php //the_archive_description('<div class="taxonomy-description">', '</div>');?>
+							<?php if( get_field('certifications_header', 'options') ): ?>
+								<?php the_field('certifications_header', 'options'); ?>
+							<?php endif; ?>
+				    	</header>
+				    </div>
+				</div>
 
 
 
@@ -33,7 +36,7 @@ get_header(); ?>
         // setup the category ID
         $cat_id = $cat->term_id;
         // Make a header for the category
-        echo "<h2 style='text-align:center;'>".$cat->name."</h2>";
+        echo "<h2 style='text-align:center; margin:2rem 0rem;'>".$cat->name."</h2>";
         // create a custom wordpress query
  
         query_posts(array( 

@@ -33,6 +33,12 @@ get_header(); ?>
 
 <?php endif; ?>
 
+<?php if ( is_page('contact-us') ) : ?>
+	
+	<?php get_template_part( 'parts/contact', 'us' ); ?>
+
+<?php endif; ?>
+
 <?php if ( is_page('about') ) : ?>
 
 	<?php get_template_part( 'parts/loop', 'staff-grid' ); ?>

@@ -55,10 +55,10 @@
 						  To see additional nav styles, visit the /parts directory -->
 						<?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
 						<div class="top-bar-cta show-for-medium">
-							<a href="<?php the_field('billing_payment_link', 'option'); ?>" class="button pay-cta" target="_blank">Pay Your Bill</a><a href="<?php the_field('contact_us_link', 'option'); ?>" class="button contact-cta">Contact Us</a>
+							<a href="<?php the_field('billing_payment_link', 'option'); ?>" class="button pay-cta" target="_blank">Pay Your Bill</a><a href="<?php echo get_the_permalink(get_field('contact_us_link', 'option')); ?>" class="button contact-cta">Contact Us</a>
 						</div>
 						<div class="top-bar-mob-cta hide-for-medium">
-							<a href="<?php the_field('billing_payment_link', 'option'); ?>" class="button pay-cta" target="_blank">Pay Your Bill</a><a href="<?php the_field('contact_us_link', 'option'); ?>" class="button contact-cta">Contact Us</a>
+							<a href="<?php the_field('billing_payment_link', 'option'); ?>" class="button pay-cta" target="_blank">Pay Your Bill</a><a href="<?php echo get_the_permalink(get_field('contact_us_link', 'option')); ?>" class="button contact-cta">Contact Us</a>
 						</div>
 	 				</div>
 				</header> <!-- end .header -->
