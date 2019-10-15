@@ -366,6 +366,11 @@ body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 { font-family: 'Gothi
 .h5, h5 { font-size:16px; font-weight:500; }
 .h6, h6 { font-size:14px; font-weight:500; }
 
+a[href^="tel"] {
+  color: inherit; /* Inherit text color of parent element. */
+  text-decoration: none; /* Remove underline. */
+}
+
 .active { color:#003d94; }
 .hover { color:#005cb5; }
 

@@ -10,12 +10,12 @@ $grid_columns = 2; ?>
 
 <?php if( 0 === ( $wp_query->current_post  )  % $grid_columns ): ?>
 
-    <div id="certification-grid" class="grid-x grid-margin-x NOgrid-padding-x archive-grid align-center certification-grid" data-equalizer> <!--Begin Grid--> 
+    <div id="certification-grid" class="grid-x grid-margin-x NOgrid-padding-x archive-grid xalign-center certification-grid" data-equalizer> <!--Begin Grid--> 
 
 <?php endif; ?> 
 
 		<!--Item: -->
-		<div class="small-12 medium-5 cell panel" data-equalizer-watch>
+		<div class="small-12 medium-6 cell panel" data-equalizer-watch>
 			
 			<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">
 

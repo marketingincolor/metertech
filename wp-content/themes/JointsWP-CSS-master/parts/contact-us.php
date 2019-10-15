@@ -13,14 +13,14 @@ $co_fax = get_field('company_fax', 'option');
 
 <div class="contact redbar" style="background-color:#A11217; padding:3em 0em; color:#fff;">
 	<div class="xcontent grid-container">
-		<div class="inner-content grid-x grid-margin-x align-center">
+		<div class="inner-content grid-x grid-margin-x align-center text-center">
 		    <div class="main small-12 medium-11 cell">
 
 				<div class="grid-x grid-margin-x align-center-middle">
 					<div class="cell shrink">
 				    	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mtw-cu-order-icon.svg">
 				    </div>
-				    <div class="cell shrink">
+				    <div class="cell small-12 medium-shrink">
 						<span style="font-size:1.25em;">To place an order, email us at <a href="mailto:<?php echo $order_email; ?>" style="color:#fff;font-weight:600; "><?php echo $order_email; ?></a></span>
 					</div>
 				</div>
@@ -42,7 +42,7 @@ $co_fax = get_field('company_fax', 'option');
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mtw-cu-phone-icon.svg">
 							</div>
 					    	<div class="cell small-6 medium-shrink">
-							<span style="font-size:1.25em;"><?php echo $co_phone; ?></span>
+							<span style="font-size:1.25em; color:#fff;"><?php echo $co_phone; ?></span>
 							</div>
 						</div>
 					</div>
@@ -52,7 +52,7 @@ $co_fax = get_field('company_fax', 'option');
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mtw-cu-fax-icon.svg">
 							</div>
 					    	<div class="cell small-6 medium-shrink">
-							<span style="font-size:1.25em;"><?php echo $co_fax; ?></span>
+							<span style="font-size:1.25em; color:#fff;"><?php echo $co_fax; ?></span>
 							</div>
                         </div>
 					</div>
@@ -62,7 +62,7 @@ $co_fax = get_field('company_fax', 'option');
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mtw-cu-loc-icon.svg">
 							</div>
 					    	<div class="cell small-6 medium-shrink">
-							<span style="font-size:1.25em;"><?php echo $co_address; ?><br><?php echo $co_address_alt; ?></span>
+							<span style="font-size:1.25em; color:#fff;"><?php echo $co_address; ?><br><?php echo $co_address_alt; ?></span>
 							</div>
                         </div>
 					</div>
