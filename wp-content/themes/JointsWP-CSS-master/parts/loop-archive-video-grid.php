@@ -29,7 +29,7 @@ $grid_columns = 2; ?>
 					$src = $matches[1];
 					// add extra params to iframe src
 					$params = array(
-					    'controls'    => 0,
+					    'controls'    => 1,
 					    'hd'        => 1,
 					    'autohide'    => 1
 					);

@@ -311,3 +311,28 @@ function the_breadcrumb()
         echo '</div>';
     }
 } // end the_breadcrumb()
+
+
+// Action to filter PRODUCTS Post Type displayed to show MTW CHOSEN products FIRST via True/False meta value from ACF
+function meta_chosen_pre_get_posts( $query ) {
+    if( is_admin() ) {
+        return $query;
+    }
+    if(isset($query->query_vars['post_type']) && $query->query_vars['post_type'] == 'products' ) {
+        $query->set('orderby', 'meta_value');   
+        $query->set('meta_key', 'mtw_product');   
+        $query->set('order', 'DESC'); 
+    } 
+    return $query;
+}
+//add_action('pre_get_posts', 'meta_chosen_pre_get_posts');
+add_action('parse_tax_query', 'meta_chosen_pre_get_posts');
+
+function custom_check_terms($query) {
+    if( !is_admin() /*&& $query->is_main_query()*/ ){
+        $query->set('orderby', 'meta_value');   
+        $query->set('meta_key', 'mtw_product');   
+        $query->set('order', 'DESC'); 
+    }
+}
+//add_action('parse_tax_query', 'custom_check_terms');

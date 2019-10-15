@@ -72,7 +72,12 @@ $co_fax = get_field('company_fax', 'option');
 		</div>
 	</div>
 </div>
-
+<style>
+	.nf-before-form-content .nf-form-fields-required {
+	color: #cacaca;
+    padding-bottom: 2em;
+}
+</style>
 
 <div class="contact form" style="text-align:center; padding:3em 0em;">
 	<div class="content grid-container">

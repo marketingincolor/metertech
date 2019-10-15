@@ -11,7 +11,7 @@
 				<div class="grid-x grid-margin-x align-center">
 
 				<?php 
-					$args = array('post_type' => 'staff', 'posts_per_page' => '4' );
+					$args = array('post_type' => 'staff', 'posts_per_page' => '12' );
 					$newsQuery = new WP_Query($args);
 				?>
 				<?php if ( $newsQuery->have_posts() ) : ?>
