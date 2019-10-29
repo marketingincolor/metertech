@@ -326,7 +326,8 @@ function meta_chosen_pre_get_posts( $query ) {
     return $query;
 }
 //add_action('pre_get_posts', 'meta_chosen_pre_get_posts');
-add_action('parse_tax_query', 'meta_chosen_pre_get_posts');
+//
+//add_action('parse_tax_query', 'meta_chosen_pre_get_posts');
 
 function custom_check_terms($query) {
     if( !is_admin() /*&& $query->is_main_query()*/ ){
@@ -336,3 +337,12 @@ function custom_check_terms($query) {
     }
 }
 //add_action('parse_tax_query', 'custom_check_terms');
+
+
+
+function custom_posts_per_page( $query ) {
+if ( $query->is_archive('products') ) {
+    set_query_var('posts_per_page', -1);
+}
+}
+add_action( 'pre_get_posts', 'custom_posts_per_page' );

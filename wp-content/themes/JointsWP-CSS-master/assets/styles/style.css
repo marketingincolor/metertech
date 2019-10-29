@@ -479,20 +479,20 @@ CUSTOM PAGE COMPONENTS
 .search article .article-header .title { padding-top:1rem; font-size:18px; font-weight:700; }
 .search article .article-header .title a { color:inherit; }
 article { text-align:center; }
-article.category-news .article-header { margin-bottom:1em; }
-article.category-news .article-header .title { padding-top:1rem; font-size:18px; font-weight:700; }
-article.category-news .article-header .title a { color:inherit; }
-article.category-news .entry-content .entry-title { margin-top: 1.75rem; margin-bottom: 1rem; }
-article.category-news .entry-content p { text-align:left; }
+.archive article.type-post .article-header { margin-bottom:1em; }
+.archive article.type-post .article-header .title { padding-top:1rem; font-size:18px; font-weight:700; }
+.archive article.type-post .article-header .title a { color:inherit; }
+.archive article.type-post .entry-content .entry-title { margin-top: 1.75rem; margin-bottom: 1rem; }
+.archive article.type-post .entry-content p { text-align:left; }
+.archive article.type-post .entry-content { margin-bottom:2em; }
+.archive article.type-post .entry-content p { text-align:center; line-height:1.2; }
+.archive article.type-post .entry-content .read-button { font-size:10px; font-weight:900; text-transform:uppercase; padding:.5rem 1.5rem; border:2px solid #cc1c29; color:#242626; text-align:center; }
+.archive article.type-post .entry-content .read-button:hover { background-color:#cc1c29; color:#FFF; text-align:center; }
+
 article.type-products .article-footer .button { text-transform:uppercase; font-weight:800; padding:.85em 2em; background-color:transparent; }
 article.type-products .article-footer .button.download { color:#FFF; border:2px solid #a11217; background-color:#a11217;  }
 article.type-products .article-footer .button.download:hover { background-color:#cc1c29; }
 .single article .entry-content ul { text-align:left; }
-
-.archive article.category-news .entry-content { margin-bottom:2em; }
-.archive article.category-news .entry-content p { text-align:center; line-height:1.2; }
-.archive article.category-news .entry-content .read-button { font-size:10px; font-weight:900; text-transform:uppercase; padding:.5rem 1.5rem; border:2px solid #cc1c29; color:#242626; text-align:center; }
-.archive article.category-news .entry-content .read-button:hover { background-color:#cc1c29; color:#FFF; text-align:center; }
 
 .product-grid .product-filter { padding:1em 0em 3em 0em; }
 .product-grid .type-icon { position:relative; z-index:10; top:10px; left:-10px; max-width:40px; }
@@ -537,6 +537,11 @@ article.type-products .article-footer .button.download:hover { background-color:
 .staff-grid article .staff-content .title { font-weight:600; }
 .staff-grid article .staff-content h4 { font-size:16px; }
 .staff-grid article .staff-content a { color:#FFF; }
+
+.staff-grid article .support-content { color:#FFF; position:relative; background-color:rgba(0, 92, 181, 1); bottom:0px; width:100%; padding:2em 3em; }
+.staff-grid article .support-content .title { font-weight:600; }
+.staff-grid article .support-content h4 { font-size:16px; }
+.staff-grid article .support-content a { color:#FFF; }
 
 .single-staff .staff button.non-button { cursor:pointer; }
 .single-staff .staff .button { font-size:10px; text-transform:uppercase; font-weight:800; padding:.5em 2em; background-color:transparent; }

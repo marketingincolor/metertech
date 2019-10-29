@@ -4,15 +4,23 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting" style="position:relative;">
 						
 	<header class="article-header">	
 		<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
 		<h4>Part Number: <?php the_field('part_number'); ?></h4>
     </header> <!-- end article header -->
-					
+			<div style="top:132px; position:absolute;">
+				<?php $terms = get_the_terms( $post->ID , 'product_type' ); 
+                    foreach ((array) $terms as $term ) {
+                        $term_link = get_term_link( $term, 'product_type' );
+                        //if( is_wp_error( $term_link ) )
+                        //continue;
+                    	echo '<img class="type-icon" src="'. get_template_directory_uri() .'/assets/images/mtw-type-ico-' . $term->slug . '.png" />';
+                    } 
+                ?>
+            </div>
     <section class="entry-content" itemprop="text">
-
 		<div class="grid-x align-center product-image-gallery">
 			<div class="cell auto">
 				<img class="product-image" id="main-product-image" src="<?php the_post_thumbnail_url('full'); ?>" alt="">

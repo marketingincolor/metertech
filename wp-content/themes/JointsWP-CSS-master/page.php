@@ -42,6 +42,8 @@ get_header(); ?>
 <?php if ( is_page('about') ) : ?>
 
 	<?php get_template_part( 'parts/loop', 'staff-grid' ); ?>
+	
+	<?php get_template_part( 'parts/loop', 'staffsupport-grid' ); ?>
 
 <?php else: ?>
 	

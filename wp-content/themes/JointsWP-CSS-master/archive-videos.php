@@ -15,8 +15,9 @@ get_header(); ?>
 		
 		    <main class="main small-12 cell" role="main">
 			    
-		    	<header>
+		    	<header style="text-align:center;">
 		    		<h1 class="page-title"><?php post_type_archive_title(); ?></h1>
+		    		<h5 style="margin:auto; margin-bottom:4em; width:70%;">MTW is committed to helping educate the users of its products. On this page we will post videos that assist our customers with the use of our products.</p>
 					<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
 		    	</header>
 		

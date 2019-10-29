@@ -25,7 +25,7 @@
 				$categories = get_categories( array(
 					'taxonomy' => 'product_type',
 					'hide_empty' => 0,
-					'exclude' => array(15),
+					//'exclude' => array(15),
 				    'orderby' => 'name',
 				    'order'   => 'ASC'
 				) );
