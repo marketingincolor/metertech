@@ -36,7 +36,7 @@ get_header(); ?>
         // setup the category ID
         $cat_id = $cat->term_id;
         // Make a header for the category
-        echo "<h2 style='text-align:center; margin:2rem 0rem;'>".$cat->name."</h2>";
+        //echo "<h2 style='text-align:center; margin:2rem 0rem;'>".$cat->name."</h2>";
         // create a custom wordpress query
  
         query_posts(array( 

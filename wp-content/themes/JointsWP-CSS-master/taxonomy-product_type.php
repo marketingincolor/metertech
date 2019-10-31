@@ -24,6 +24,7 @@ get_header(); ?>
 
 		$tax_query = new WP_Query( array(
 		    'post_type' => 'products',
+		    'posts_per_page' => -1,
 		    'tax_query' => array(
 		    	array(
 		    		'taxonomy' => 'product_type',

@@ -49,14 +49,12 @@ require_once(get_template_directory().'/functions/translation/translation.php');
 
 // CPT UI - Add all Post Types to Archive
 function my_cptui_add_post_types_to_archives( $query ) {
-    // We do not want unintended consequences.
     if ( is_admin() || ! $query->is_main_query() ) {
         return;    
     }
 
     if ( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
         $cptui_post_types = cptui_get_post_type_slugs();
-
         $query->set(
             'post_type',
             array_merge(
@@ -75,7 +73,8 @@ function my_cptui_add_post_type_to_search( $query ) {
     }
 
     if ( $query->is_search() ) {
-        $cptui_post_types = cptui_get_post_type_slugs();
+        //$cptui_post_types = cptui_get_post_type_slugs();
+        $cptui_post_types = array( 'products', 'certifications' );
         $query->set(
             'post_type',
             array_merge(
@@ -85,7 +84,17 @@ function my_cptui_add_post_type_to_search( $query ) {
         );
     }
 }
-//add_filter( 'pre_get_posts', 'my_cptui_add_post_type_to_search' );
+add_filter( 'pre_get_posts', 'my_cptui_add_post_type_to_search' );
+
+
+
+
+
+
+
+
+
+
 
 /**
  * Extend WordPress search to include custom fields
@@ -107,7 +116,7 @@ function cf_search_join( $join ) {
 
     return $join;
 }
-add_filter('posts_join', 'cf_search_join' );
+//add_filter('posts_join', 'cf_search_join' );
 
 /**
  * Modify the search query with posts_where
@@ -125,7 +134,7 @@ function cf_search_where( $where ) {
 
     return $where;
 }
-add_filter( 'posts_where', 'cf_search_where' );
+//add_filter( 'posts_where', 'cf_search_where' );
 
 /**
  * Prevent duplicates
@@ -141,7 +150,16 @@ function cf_search_distinct( $where ) {
 
     return $where;
 }
-add_filter( 'posts_distinct', 'cf_search_distinct' );
+//add_filter( 'posts_distinct', 'cf_search_distinct' );
+
+
+
+
+
+
+
+
+
 
 
 

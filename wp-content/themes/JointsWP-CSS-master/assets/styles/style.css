@@ -471,11 +471,14 @@ CUSTOM PAGE COMPONENTS
 .related-cert .inner-content { padding:5em; }
 .related-cert .inner-content h2 { padding:1em; }
 
-.content.grid-container { margin-bottom:1em; }
+.content.grid-container { margin-bottom:1rem; }
 
+.search .archive-grid { margin-bottom:1rem; }
 .search article { margin-bottom:1em; }
+.search article .featured-image { min-height:120px; }
 .search article .featured-image a { color:inherit; }
-.search article .featured-image a i { color:inherit; font-size:4em; }
+.search article .featured-image a i { color:inherit; font-size:4em; padding:1.5rem 0rem; }
+.search article .article-header { min-height:80px; }
 .search article .article-header .title { padding-top:1rem; font-size:18px; font-weight:700; }
 .search article .article-header .title a { color:inherit; }
 article { text-align:center; }
@@ -538,7 +541,7 @@ article.type-products .article-footer .button.download:hover { background-color:
 .staff-grid article .staff-content h4 { font-size:16px; }
 .staff-grid article .staff-content a { color:#FFF; }
 
-.staff-grid article .support-content { color:#FFF; position:relative; background-color:rgba(0, 92, 181, 1); bottom:0px; width:100%; padding:2em 3em; }
+.staff-grid article .support-content { color:#FFF; position:relative; background-color:rgba(0, 92, 181, 1); bottom:0px; width:100%; padding:2em 3em; min-height:185px; }
 .staff-grid article .support-content .title { font-weight:600; }
 .staff-grid article .support-content h4 { font-size:16px; }
 .staff-grid article .support-content a { color:#FFF; }
